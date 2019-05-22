@@ -1,0 +1,24 @@
+<div class="navBar">
+    <div id="logo"></div>
+    <div id="heading"><a routerLink="/">Snapchat</a></div>
+  <div class="links">
+    <span>
+      <a *ngIf="!(user|async)?.uid" routerLink="/login" (click)="login()">Login</a>
+    </span>
+    <span>
+      <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
+    </span>
+    <span>
+      <span id="userEmail" *ngIf="(user|async)?.uid">Hello <span id="online"> {{userName}}</span> </span> 
+    </span>
+   
+    <span>
+      <a *ngIf="(user|async)?.uid"  (click)="logout()">Logout</a>
+    </span>
+
+    <span class="fa fa-caret-down display" (click)="showusers()" ></span>
+    <ul *ngIf="ulshow" class="userlist">
+     <li *ngFor="let people of users">{{people.displayName}}</li>
+    </ul>
+  </div>
+</div>
