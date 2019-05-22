@@ -73,4 +73,8 @@ export class ChatService {
 
     return (date + ' ' + time);
   }
+
+  deletesinglechat(key:string){
+    this.chatMessages.remove(key);
+  }
 }

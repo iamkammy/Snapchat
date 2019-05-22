@@ -23,4 +23,8 @@ export class FeedComponent implements OnInit, OnChanges {
     this.feed = this.chat.getMessages();
   }
 
+  select(event){
+  //  console.log(event);
+  }
+
 }

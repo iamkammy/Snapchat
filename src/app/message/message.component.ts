@@ -17,8 +17,9 @@ export class MessageComponent implements OnInit {
   timeStamp: Date = new Date();
   isOwnMessage: boolean;
   ownEmail: string;
-
-  constructor(private authService: AuthService) {
+  delkey:string;
+  constructor(private authService: AuthService, private chatService:ChatService) {
+    
     authService.authUser().subscribe(user => {
       this.ownEmail = user.email;
       this.isOwnMessage = this.ownEmail === this.userEmail;
@@ -30,5 +31,17 @@ export class MessageComponent implements OnInit {
     this.timeStamp = chatMessage.timeSent;
     this.userEmail = chatMessage.email;
     this.userName = chatMessage.userName;
+    this.delkey = chatMessage.$key;
+    console.log(this.chatMessage)
   }
+  messageselect(event){
+    console.log(event.target.offsetParent.childNodes[0].innerText);
+    let key = event.target.offsetParent.childNodes[0].innerText;
+   this.deletemessage(key);
+  }
+
+  deletemessage(key){
+    this.chatService.deletesinglechat(key);
+  }
+
 }

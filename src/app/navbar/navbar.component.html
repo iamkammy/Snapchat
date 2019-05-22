@@ -16,7 +16,7 @@
       <a *ngIf="(user|async)?.uid"  (click)="logout()">Logout</a>
     </span>
 
-    <span class="fa fa-caret-down display" (click)="showusers()" ></span>
+    <span class="fa fa-cog display" (click)="showusers()" ></span>
     <ul *ngIf="ulshow" class="userlist">
      <li *ngFor="let people of users">{{people.displayName}}</li>
     </ul>

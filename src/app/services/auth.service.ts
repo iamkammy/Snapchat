@@ -41,7 +41,12 @@ export class AuthService {
           this.refresh();
         })
         .catch((err)=>{
-          alert(err);
+          Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text:`${err}`,
+          })
+
         })
     }
 

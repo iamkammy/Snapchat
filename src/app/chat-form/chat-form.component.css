@@ -18,7 +18,7 @@
 .chatInput:focus{
     background-color: #E4F1FE;
     color: #222;
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
     transition: 0.2s ease-in;
 }
 
@@ -59,7 +59,7 @@
     .chatInput:focus{
         background-color: #E4F1FE;
         color: #222;
-        font-size: 0.8em;
+        /* font-size: 0.8em; */
         transition: 0.1s ease-in;
     }
     
