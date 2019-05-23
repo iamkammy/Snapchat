@@ -1,5 +1,37 @@
-<div class="navBar">
-    <div id="logo"></div>
+<div class="container-fluid navwrapper">
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" routerLink="/">Snapchat</a>
+        <!-- <form class="form-inline">
+         <a href="" class="mr-2">Login</a>
+         <a href="">Signup</a>
+        </form> -->
+
+        <div class="links">
+            <span>
+              <a *ngIf="!(user|async)?.uid" routerLink="/login" (click)="login()">Login</a>
+            </span>
+            <span>
+              <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
+            </span>
+            <span>
+              <span id="userEmail" *ngIf="(user|async)?.uid">Hello <span id="online"> {{userName}}</span> </span> 
+            </span>
+           
+            <span>
+              <a *ngIf="(user|async)?.uid"  (click)="logout()">Logout</a>
+            </span>
+        
+            <span class="fa fa-user display" (click)="showusers()" ></span>
+            <ul *ngIf="ulshow" class=" list-group userlist">
+             <li class="peoplelist bg-success text-white list-group-item list-group-item-action" *ngFor="let people of users">{{people.displayName}}</li>
+            </ul>
+        </div>
+
+      </nav>
+
+  <!-- <div class="navBar">
+    
     <div id="heading"><a routerLink="/">Snapchat</a></div>
   <div class="links">
     <span>
@@ -21,4 +53,6 @@
      <li *ngFor="let people of users">{{people.displayName}}</li>
     </ul>
   </div>
+</div> -->
+
 </div>

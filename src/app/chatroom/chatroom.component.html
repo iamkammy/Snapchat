@@ -1,12 +1,32 @@
-<div class="mainContent">
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-2 col-sm-2 pd0">
+      <div class="userListWrapper">
+          <app-user-list></app-user-list>
+        </div>
+  </div>
+  <div class="col-md-10 col-sm-10" style="padding-left:0; padding-right:0;">
+      <div #scroller class="feedWrapper">
+          <app-feed></app-feed>
+        </div>
+  </div>
+</div>
+<div class="row mt-1">
+  <div class="col-md-12">
+          <app-chat-form ></app-chat-form>
+        
+  </div>
+</div>
+</div>
+
+
+<!-- <div class="mainContent">
   <div class="userListWrapper">
     <app-user-list></app-user-list>
   </div>
   <div #scroller class="feedWrapper" style="overflow: scroll; max-height: calc(100vh - 175px);">
     <app-feed></app-feed>
   </div>
-</div>
+</div> -->
 
-<div class="chatFormWrapper">
-  <app-chat-form style="width:100%;"></app-chat-form>
-</div>

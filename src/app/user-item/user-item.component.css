@@ -1,10 +1,8 @@
 .userItem{
     height: auto;
-    padding: 10px;
-    width: 90%;
+    padding: 3px;
+    width: 100%;
     margin-top: 10px;
-    border-radius: 1px;
-    align-items:flex-start;
     background-color: #201835;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     color: #A098A5;
@@ -14,9 +12,8 @@
 
 @media (min-width:320px) and (max-width:550px){
     .userItem{
-        
-        padding: 10px;
-        width: 100px;
+        padding: 3px;
+      
         margin-top: 10px;
         background-color: #201835;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

@@ -1,52 +1,32 @@
-.mainContent{
+/* .mainContent{
     display: flex;
+} */
+
+.pd0{
+    padding: 0 !important;
 }
-
-
 .userListWrapper {
     background-color: #2A2845;
     color: #fff;
-    display: flex;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.2em;
-    flex: 1;
-    order: 1;
-    padding:20px 0px 40px 30px;
+    font-size: 16px;
+    /* padding:20px 0px 40px 30px; */
     border-right: 1px solid #222;
+    height: calc(100vh - 105px);
+    overflow-y: auto;
+    width: 90% !important;
 }
 
 .feedWrapper {
     background-color: #fff;
-    /* background: 
-        linear-gradient(181deg, rgba(100,200,255,0.6), rgba(0, 0, 0, 0.9)),
-        url('../../assets/img/chat-bg-1.png') center center no-repeat; */
     font-family: "Open Sans", sans-serif;
-    font-size: 1.2em;
-    flex: 5;
-    order: 2;
-    
-    overflow-y: scroll;
-    padding:20px 0px 0px 24px;
+    font-size: 14px;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
 }
 
-.chatFormWrapper {
-    display: flex;
-    height: 50px;
-    background-color: #eee;
-    z-index: 3;
-   
-}
 
-#scroll-style::-webkit-scrollbar-track
-{
-	border-radius: 10px;
-	background-color: #F5F5F5;
-}
-
-app-user-list {
-    width: 100%;
-}
-@media (min-width:320px) and (max-width:550px){
+@media (min-width:320px) and (max-width:575px){
     .userListWrapper {
         display: none;
         background-color: #2A2845;
@@ -59,6 +39,7 @@ app-user-list {
         padding:0px 0px 0px 0px;
         border-right: 1px solid #222;
     }
+    
     .feedWrapper{
         background-color: #fff;
         font-family: "Open Sans", sans-serif;

@@ -13,7 +13,7 @@ export class ChatService {
   chatMessages: FirebaseListObservable<ChatMessage[]>;
   chatMessage: ChatMessage;
   userName: Observable<string>;
-
+  messageList: FirebaseListObservable<any>;
   constructor(
     private db: AngularFireDatabase,
     private afAuth: AngularFireAuth
@@ -61,6 +61,11 @@ export class ChatService {
       }
     });
   }
+  storeMessages(){
+    this.messageList = this.db.list('messages');
+    console.log(this.messageList);
+    // return this.messageList;
+  }
 
   getTimeStamp() {
     const now = new Date();
@@ -74,7 +79,11 @@ export class ChatService {
     return (date + ' ' + time);
   }
 
-  deletesinglechat(key:string){
-    this.chatMessages.remove(key);
+  deletesinglechat(key:string){ 
+    // this.chatMessages.remove(key);
+   this.storeMessages();
+    // const path = '/messages';
+    
+     this.messageList.remove(key);
   }
 }

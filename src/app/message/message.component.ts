@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ChatService } from '../services/chat.service';
 import { AuthService } from '../services/auth.service';
 import { ChatMessage } from '../models/chat-message.model';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-message',
@@ -10,6 +12,7 @@ import { ChatMessage } from '../models/chat-message.model';
 })
 export class MessageComponent implements OnInit {
 
+    
   @Input() chatMessage: ChatMessage;
   userEmail: string;
   userName: string;
@@ -40,7 +43,7 @@ export class MessageComponent implements OnInit {
    this.deletemessage(key);
   }
 
-  deletemessage(key){
+  deletemessage(key){ 
     this.chatService.deletesinglechat(key);
   }
 
