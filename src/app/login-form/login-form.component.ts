@@ -11,8 +11,7 @@ export class LoginFormComponent {
   email: string;
   password: string;
   errorMsg: string;
-
-
+  
   constructor(private authService: AuthService, private router: Router) { }
 
 pass(event){
@@ -26,6 +25,6 @@ pass(event){
     console.log('login() called from login-form component');
     this.authService.login(this.email, this.password)
     .catch(error => this.errorMsg = error.message);
-    // alert(this.errorMsg);
+   
   }
 }

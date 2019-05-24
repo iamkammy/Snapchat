@@ -2,7 +2,7 @@
     display: flex;
     height: auto;
     width: 100%;
-    /* min-width: 400px; */
+    
     border-radius: 5px;
     align-items:stretch;
     background-color: #eee;
@@ -20,10 +20,16 @@
     font-size: 0.7em;
    
 }
-#timestampspan{
-  
-}
 
+#trash{
+    width: 12px;
+    position: absolute;
+    top: 16px;
+    text-align: center;
+    right: 1%;
+    color: indianred;
+    font-size: 16px;
+}
 .sender{
     display: block;
     color: #222;
@@ -70,6 +76,14 @@
         background-color: #eee;
         box-shadow: 0 3px 6px rgba(0,0,0,0.26), 0 3px 6px rgba(0,0,0,0.23);
         position: relative;
+    }
+    #trash{
+        width: 12px;
+        position: absolute;
+        top: 16px;
+        text-align: center;
+        right: 3%;
+       
     }
     .timestamp {
         color: #555;

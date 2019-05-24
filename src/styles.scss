@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 6px;
+}

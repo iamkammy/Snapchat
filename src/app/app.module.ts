@@ -23,6 +23,7 @@ import { AuthService } from './services/auth.service';
 import { appRoutes } from '../routes';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AuthGuardServiceService } from './services/auth-guard-service.service';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AngularFireModule.initializeApp(environment.firebase),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
+
   providers: [AuthService, ChatService],
   bootstrap: [AppComponent]
 })

@@ -6,14 +6,15 @@ import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../models/user.model';
 import Swal from 'sweetalert2';
+import { Component, ViewEncapsulation } from '@angular/core';
 @Injectable()
 export class AuthService {
   private user: Observable<firebase.User>;
   private authState: any;
+  encapsulation: ViewEncapsulation.None 
 
-  constructor(private afAuth: AngularFireAuth,
-    private db: AngularFireDatabase,
-    private router: Router) {
+  constructor(private afAuth: AngularFireAuth,private db: AngularFireDatabase,private router: Router) 
+   {
       this.user = afAuth.authState;
     }
 
@@ -21,7 +22,6 @@ export class AuthService {
       return this.user;
     
     }
-
     get currentUserId(): string {
       return this.authState !== null ? this.authState.uid : '';
     }
@@ -29,12 +29,20 @@ export class AuthService {
     login(email: string, password: string) {
       return this.afAuth.auth.signInWithEmailAndPassword(email, password)
         .then((user) => {
-          console.log(user);
+          console.log(user.json + "from user");
           this.authState = user;
+    
+          localStorage.setItem("AuthUSerlogin", "true");
+
+
           this.setUserStatus('online');
-          this.router.navigate(['chat']);
+
+          if(localStorage.getItem('AuthUSerlogin') == 'true'){
+            this.router.navigate(['chat']);
+          }
           Swal.fire(
-            'Successfully Login!',
+            'Successfully Login',
+            'Welcome To Snapchat!!!',
             'success'
           )
 
@@ -58,6 +66,15 @@ export class AuthService {
 
     logout() {
       this.afAuth.auth.signOut();
+      localStorage.setItem("AuthUSerlogin", "false");
+      Swal.fire({
+        position: 'top-end',
+        type: 'success',
+       
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
       this.router.navigate(['login']);
     }
 

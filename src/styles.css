@@ -8,6 +8,21 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+
+.swal2-popup {    
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;   
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 6px !important;
+}
+
 /* app-chatroom {
     display: flex;
     flex-direction: column;

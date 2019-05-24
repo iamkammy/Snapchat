@@ -8,20 +8,23 @@ import {NgForm} from '@angular/forms';
 export class ChatroomComponent implements OnInit, AfterViewChecked {
   @ViewChild('scroller') private feedContainer: ElementRef;
 
-  constructor() { }
+  constructor() {  }
 
   ngOnInit() {
+    
   }
 
   scrollToBottom(): void {
   
     // console.log("huha");
     try{
-      this.feedContainer.nativeElement.scrollTop = this.feedContainer.nativeElement.scrollHeight;
+     
+        this.feedContainer.nativeElement.scrollTop = this.feedContainer.nativeElement.scrollHeight;
+     
     }
     catch (err){}
+  
   }
-
   ngAfterViewChecked() {
     this.scrollToBottom();
   }

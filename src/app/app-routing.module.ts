@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { AuthGuardServiceService } from './services/auth-guard-service.service';
 
 const routes: Routes = [
-
+  { path: 'chat', canActivate:[false], component: ChatroomComponent},
   { path: 'signup', component: SignupFormComponent},
   { path: 'login', component: LoginFormComponent},
-  { path: 'chat', component: ChatroomComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 

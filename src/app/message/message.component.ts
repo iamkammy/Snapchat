@@ -35,10 +35,10 @@ export class MessageComponent implements OnInit {
     this.userEmail = chatMessage.email;
     this.userName = chatMessage.userName;
     this.delkey = chatMessage.$key;
-    console.log(this.chatMessage)
+    // console.log(this.chatMessage)
   }
   messageselect(event){
-    console.log(event.target.offsetParent.childNodes[0].innerText);
+    // console.log(event.target.offsetParent.childNodes[0].innerText);
     let key = event.target.offsetParent.childNodes[0].innerText;
    this.deletemessage(key);
   }

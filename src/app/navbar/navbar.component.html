@@ -1,12 +1,8 @@
 <div class="container-fluid navwrapper">
 
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" routerLink="/">Snapchat</a>
-        <!-- <form class="form-inline">
-         <a href="" class="mr-2">Login</a>
-         <a href="">Signup</a>
-        </form> -->
-
+        <a class="navbar-brand text-info" routerLink="/">Snapchat</a>
+       
         <div class="links">
             <span>
               <a *ngIf="!(user|async)?.uid" routerLink="/login" (click)="login()">Login</a>

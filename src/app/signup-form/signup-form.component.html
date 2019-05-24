@@ -1,7 +1,7 @@
 <div class="container">
   <div class="signUpCard">
    <form #signupForm="ngForm">
-    <h2 class="heading text-center mb-4">Sign Up</h2>
+    <h2 class="text-center mb-4">Sign Up</h2>
 
     <div class="form-group">
     <label class="label">Email</label>
@@ -9,12 +9,12 @@
        type="email" name="emailname"
        placeholder="Enter your email address" 
        [(ngModel)]="email" class=" form-control formInput"
-       
+       email
        pattern="[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
        #emailid="ngModel"
        [class.is-invalid]="emailid.invalid && emailid.touched"
        maxlength="60" required/>
-   <p *ngIf="emailid.invalid && emailid.errors.pattern" class="text-danger small">* Please Enter a Valid Email Id</p>
+   <p *ngIf="emailid.invalid && emailid.touched && emailid.errors.pattern" class="text-danger small">* Please Enter a Valid Email Id</p>
     </div>
 
     <div class="form-group">
@@ -25,7 +25,7 @@
         [(ngModel)]="password" class="form-control formInput" 
         minlength="6"
         #pass="ngModel"
-        [class.is-invalid]="pass.invalid"
+        [class.is-invalid]="pass.invalid && pass.touched"
         required/>
         <p class="text-danger small" *ngIf="pass.invalid&&pass.touched">Please Enter password of minimun 6 letters</p>
      </div>
@@ -44,7 +44,8 @@
 
       <button [disabled]="!signupForm.form.valid" 
               type="submit" (click)="signUp()"
-              class="btn" id="btn-signUp">
+              id="signup-btn"
+              class="btn btn-danger w-100" >
               Sign Up
       </button>
     </form>
