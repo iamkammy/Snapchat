@@ -70,8 +70,7 @@ export class AuthService {
       Swal.fire({
         position: 'top-end',
         type: 'success',
-       
-        title: 'Your work has been saved',
+        title: 'Logged Out',
         showConfirmButton: false,
         timer: 1500
       })
