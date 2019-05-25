@@ -6,6 +6,7 @@ import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../models/user.model';
 import Swal from 'sweetalert2';
+
 import { Component, ViewEncapsulation } from '@angular/core';
 @Injectable()
 export class AuthService {
@@ -22,6 +23,15 @@ export class AuthService {
     }
     get currentUserId(): string {
       return this.authState !== null ? this.authState.uid : '';
+    }
+
+    resetPassword(email: string) {
+      console.log('emaillll22222',email);
+      var auth = firebase.auth();
+      
+      console.log('emaillll222223332222',email);
+      return auth.sendPasswordResetEmail(email)
+       
     }
 
     login(email: string, password: string) {

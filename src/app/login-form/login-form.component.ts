@@ -24,7 +24,20 @@ pass(event){
   login() {
     console.log('login() called from login-form component');
     this.authService.login(this.email, this.password)
-    .catch(error => this.errorMsg = error.message);
-   
+    .catch(error => this.errorMsg = error.message); 
   }
+  resetPassword(email: string) {
+    console.log('emailllllllllllll',email);
+    try{
+
+  this.authService.resetPassword(email).then((res:any) => console.log('emaillll2222233333',"email sent",res))
+      .catch((error) => {
+        console.log('emaillll2222244444',error);
+      })
+    }
+    catch(error){
+      console.log('erorrrrrrrrrrrrr',error);
+    }
+  }
+  
 }
