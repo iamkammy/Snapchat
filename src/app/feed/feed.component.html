@@ -1,4 +1,4 @@
-<div class="feed">
+<div class="feed" *ngIf="feed">
   <div *ngFor="let message of feed | async; let i = index" class="message">
     <app-message (click)="select($event)"  [chatMessage]=message></app-message>
   </div>

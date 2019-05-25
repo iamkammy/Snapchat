@@ -17,10 +17,8 @@ export class AuthService {
    {
       this.user = afAuth.authState;
     }
-
     authUser() {
       return this.user;
-    
     }
     get currentUserId(): string {
       return this.authState !== null ? this.authState.uid : '';
@@ -33,8 +31,6 @@ export class AuthService {
           this.authState = user;
     
           localStorage.setItem("AuthUSerlogin", "true");
-
-
           this.setUserStatus('online');
 
           if(localStorage.getItem('AuthUSerlogin') == 'true'){

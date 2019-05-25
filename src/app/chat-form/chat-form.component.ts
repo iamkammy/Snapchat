@@ -17,6 +17,7 @@ export class ChatFormComponent implements OnInit {
   send() {
     this.chat.sendMessage(this.message);
     this.message = '';
+    this.chat.isScroll = true;
   }
 
   handleSubmit(event) {

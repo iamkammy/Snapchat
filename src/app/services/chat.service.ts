@@ -13,6 +13,8 @@ export class ChatService {
   chatMessages: FirebaseListObservable<ChatMessage[]>;
   chatMessage: ChatMessage;
   userName: Observable<string>;
+  isScroll:boolean = false;
+  message_come:boolean = false;
   messageList: FirebaseListObservable<any>;
   constructor(
     private db: AngularFireDatabase,
@@ -60,6 +62,7 @@ export class ChatService {
         orderByKey: true
       }
     });
+    
   }
   storeMessages(){
     this.messageList = this.db.list('messages');
