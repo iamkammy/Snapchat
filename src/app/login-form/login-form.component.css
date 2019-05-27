@@ -1,4 +1,12 @@
 
+.container{
+  position: relative;
+}
+.container #resetbtn{
+  min-width: 32%;
+  padding: 12px;
+  cursor: pointer;
+}
 .loginCard{
   border: 1px solid #000;
   border-radius: 4px;

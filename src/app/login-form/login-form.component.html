@@ -6,6 +6,7 @@
       <input 
         [(ngModel)]="email"
         type="email" 
+        
         required
         name="email"
         #nameid="ngModel"
@@ -28,8 +29,17 @@
               (click)="login()">
               Log In
       </button>
-      <button (click)="resetPassword(email)">Reset Password</button>
-
+     
   </form>
+  
+  
+  <div class="d-flex mt-4 justify-content-between">
+      <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" (change)="remember($event)" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+
+    <p id="resetbtn"  class="badge badge-pill badge-secondary" (click)="resetPassword(email)">Reset Password</p>
+  </div>
   </div>
 </div>

@@ -26,12 +26,9 @@ export class AuthService {
     }
 
     resetPassword(email: string) {
-      console.log('emaillll22222',email);
       var auth = firebase.auth();
-      
       console.log('emaillll222223332222',email);
-      return auth.sendPasswordResetEmail(email)
-       
+      return auth.sendPasswordResetEmail(email);
     }
 
     login(email: string, password: string) {
