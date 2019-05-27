@@ -86,7 +86,6 @@ export class ChatService {
     // this.chatMessages.remove(key);
    this.storeMessages();
     // const path = '/messages';
-    
      this.messageList.remove(key);
   }
 }

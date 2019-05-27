@@ -24,7 +24,8 @@ import { appRoutes } from '../routes';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthGuardServiceService } from './services/auth-guard-service.service';
-
+import { ResetFormComponent } from './reset-form/reset-form.component';
+import {AppRoutingModule} from './app-routing.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +37,15 @@ import { AuthGuardServiceService } from './services/auth-guard-service.service';
     SignupFormComponent,
     NavbarComponent,
     UserListComponent,
-    UserItemComponent
+    UserItemComponent,
+    ResetFormComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     AngularFireModule,
+    AppRoutingModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),

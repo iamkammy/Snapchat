@@ -37,39 +37,40 @@ pass(event){
   }
 
 
-  resetPassword(email: string) {
-    console.log('emailllllllllllll',email);
-    try{
-  this.authService.resetPassword(email).then((res:any) => { 
+  // resetPassword(email: string) {
+  
+  //   console.log('emailllllllllllll',email);
+  //   try{
+  // this.authService.resetPassword(email).then((res:any) => { 
    
-    Swal.fire(
-      'An Email has been sent to your Email Id , Please Verify',
-      'You clicked the button!',
-      'success'
-    )
+  //   Swal.fire(
+  //     'An Email has been sent to your Email Id , Please Verify',
+  //     'You clicked the button!',
+  //     'success'
+  //   )
 
-    console.log('emaillll2222233333',"email sent",res)
-     })
-      .catch((error) => {
-        console.log('emaillll2222244444 from line 36',error);
-        Swal.fire({
-          type: 'error',
-          title: 'Oops...',
-          text: `${error}`,
-        })
+  //   console.log('emaillll2222233333',"email sent",res)
+  //    })
+  //     .catch((error) => {
+  //       console.log('emaillll2222244444 from line 36',error);
+  //       Swal.fire({
+  //         type: 'error',
+  //         title: 'Oops...',
+  //         text: `${error}`,
+  //       })
 
-      })
-    }
-    catch(error){
-      console.log('erorrrrrrrrrrrrr from line 40',error);
-      Swal.fire({
-        type: 'error',
-        title: 'Oops...',
-        text: `${error}`,
+  //     })
+  //   }
+  //   catch(error){
+  //     console.log('erorrrrrrrrrrrrr from line 40',error);
+  //     Swal.fire({
+  //       type: 'error',
+  //       title: 'Oops...',
+  //       text: `${error}`,
        
-      })
-    }
-  }
+  //     })
+  //   }
+  // }
 
   remember(e){
     if(this.email && this.password){
@@ -81,6 +82,10 @@ pass(event){
       }
     }
     console.log(e);
+  }
+
+  dha(){
+    this.router.navigate([''])
   }
   
 }

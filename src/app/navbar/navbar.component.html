@@ -6,6 +6,7 @@
         <div class="links">
             <span>
               <a *ngIf="!(user|async)?.uid" routerLink="/login" (click)="login()">Login</a>
+             
             </span>
             <span>
               <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
