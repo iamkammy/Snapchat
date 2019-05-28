@@ -16,7 +16,6 @@ export class ChatroomComponent implements OnInit, AfterViewChecked, AfterViewIni
   ngOnInit() {
    
     // setTimeout(() => {
-      
     //   this.feedContainer.nativeElement.scrollTop = this.feedContainer.nativeElement.scrollHeight;
     //   console.log("from ")
     // }, 5000);

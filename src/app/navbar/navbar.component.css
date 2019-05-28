@@ -14,7 +14,10 @@
     font-size: 1.5em;
     font-weight: bold;
 } */
-
+nav{
+    background-color: black;
+    color: white;
+}
 .links{
     padding-right: 16px;
     white-space: nowrap;
@@ -31,7 +34,6 @@
 } */
 
 .links a{
-    color: #555;
     text-decoration: none;
     transition: ease-in 0.2s;
     padding-right: 10px;
@@ -40,7 +42,7 @@
 }
 
 .links a:hover {
-    color: #FF9800;
+    color: #FF9800 !important;
     transition: ease-in 0.2s;
 }
 

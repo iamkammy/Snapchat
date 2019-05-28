@@ -76,7 +76,12 @@ export class AuthService {
         type: 'success',
         title: 'Logged Out',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
+       
+        customClass: {
+          container: 'container-class',
+        }
+        
       })
       this.router.navigate(['login']);
     }
