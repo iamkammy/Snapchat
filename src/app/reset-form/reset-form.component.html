@@ -1,3 +1,38 @@
-<p>
-  reset-form works!
-</p>
+<div class="container">
+  <div class="loginCard">
+    <h2 class="text-center text-warning  mb-4">Reset Password</h2>
+    <form #resetform="ngForm">
+      <div class="form-group">
+      <input 
+        [(ngModel)]="email"
+        type="email" 
+        
+        required
+        name="email"
+        #emailid="ngModel"
+        placeholder="Email Id"
+        [class.is-invalid]="emailid.invalid && emailid.touched" 
+        class="form-control formInput"/>
+        <p *ngIf="emailid.invalid && emailid.touched" class=" small text-danger">Please Enter Valid Email Id</p>
+      </div>
+   
+      <button class="btn btn-primary w-100" 
+           
+              [disabled]="resetform.invalid"
+              (click)="resetPassword(email)">
+              Send
+      </button>
+     
+  </form>
+  
+  
+  <div class="d-flex mt-4 justify-content-between">
+     
+    <a id="bcktologin" routerLink="/login" class=""><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  </div>
+</div>
+
+
+

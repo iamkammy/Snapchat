@@ -12,17 +12,16 @@ export class AuthGuardServiceService implements CanActivate{
  console.log('sdlfkjlskdjfffffffffffffffffsssssssssssssssss')    
    }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-//     let token = localStorage.getItem('AuthUSerlogin') 
+    let token = localStorage.getItem('AuthUSerlogin') 
 
+    console.log(token);
+    if (token == 'true') {
+      return true;
+    }
     
-//  console.log('sdlfkjlskdjfffffffffffffffffsssssssssssssssss')   
-//     console.log(token);
-//     if (token == 'true') {
-//       return false;
-//     }
-    
-    // this.router.navigate(['chat']);
-    // return false;
+    this.router.navigate(['login']);
+      return false;
+
   }
 
   

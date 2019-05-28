@@ -1,0 +1,27 @@
+
+  .loginCard{
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 4px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 30px;
+    padding-bottom: 52px;
+  }
+  a#bcktologin{
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    color: #abcdde;
+    transition: 0.2s;
+  }
+  a#bcktologin:hover{
+    color: #195f81;
+  }
+  h2{
+     
+      font-size: 20px;
+  }
+  
+  

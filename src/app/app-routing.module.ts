@@ -9,13 +9,11 @@ import {CanActivate} from '@angular/router';
 import {ResetFormComponent} from './reset-form/reset-form.component'
 
 const routes: Routes = [
-  { path: 'chat', canActivate:[false], component: ChatroomComponent},
+  { path: 'chat', canActivate:[AuthGuardServiceService], component: ChatroomComponent},
   // { path: 'hello', component:ResetFormComponent},
-  { path: 'hello', component: ResetFormComponent},
+  { path: 'forgotpass', component: ResetFormComponent},
   { path: 'signup', component: SignupFormComponent},
   { path: 'login', component: LoginFormComponent},
- 
- 
   { path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 

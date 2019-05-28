@@ -41,14 +41,15 @@ export class AuthService {
           this.setUserStatus('online');
 
           if(localStorage.getItem('AuthUSerlogin') == 'true'){
-            this.router.navigate(['chat']);
+            console.log('hello from localstorage')
           }
+          
+          this.router.navigate(['chat']);
           Swal.fire(
             'Successfully Login',
             'Welcome To Snapchat!!!',
             'success'
           )
-
           this.refresh();
         })
         .catch((err)=>{
