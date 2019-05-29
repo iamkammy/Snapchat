@@ -26,6 +26,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthGuardServiceService } from './services/auth-guard-service.service';
 import { ResetFormComponent } from './reset-form/reset-form.component';
 import {AppRoutingModule} from './app-routing.module'
+import { ParticlesModule } from 'angular-particle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import {AppRoutingModule} from './app-routing.module'
     AppRoutingModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    ParticlesModule,
     AngularFireModule.initializeApp(environment.firebase),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],

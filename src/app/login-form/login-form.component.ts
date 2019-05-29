@@ -8,8 +8,13 @@ import Swal from 'sweetalert2';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
-export class LoginFormComponent {
+export class LoginFormComponent implements OnInit {
   x = localStorage.getItem('RememberMe');
+
+  myStyle: object = {};
+  myParams: object = {};
+  width: number = 100;
+  height: number = 100;
 
   email:  string ;
   password: string;
@@ -21,6 +26,32 @@ export class LoginFormComponent {
       this.password=this.x.split('_')[1];
     }
     
+  }
+  ngOnInit(){
+    this.myStyle = {
+      'position': 'fixed',
+      'width': '100%',
+      'height': '100%',
+      'z-index': -1,
+      'top': 0,
+      'left': 0,
+      'right': 0,
+      'bottom': 0,
+  };
+  this.myParams = {
+    particles: {
+        number: {
+            value: 250,
+        },
+        color: {
+            value: '#ff0000'
+        },
+        shape: {
+            type: 'triangle',
+        },
+}
+};
+
   }
 
 pass(event){
@@ -37,8 +68,6 @@ pass(event){
   }
 
 
-
-
   remember(e){
     if(this.email && this.password){
       if(e.target.checked){
@@ -51,6 +80,4 @@ pass(event){
     console.log(e);
   }
 
-
-  
 }

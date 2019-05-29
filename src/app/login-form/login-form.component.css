@@ -3,10 +3,15 @@
   position: relative;
 }
 .container #resetbtn{
-  min-width: 32%;
-  padding: 12px;
+  color: #9f6363;
   cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
 }
+.container #resetbtn:hover{
+  color: #a70505;
+}
+
 .loginCard{
   border: 1px solid #000;
   border-radius: 4px;
@@ -20,4 +25,5 @@ h2{
    
     font-size: 20px;
 }
+
 

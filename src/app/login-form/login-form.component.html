@@ -1,4 +1,6 @@
+
 <div class="container">
+    <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
   <div class="loginCard">
     <h2 class="text-center  mb-4">Log In</h2>
     <form #loginform="ngForm">
@@ -42,8 +44,12 @@
           <input type="checkbox" class="form-check-input" (change)="remember($event)" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Remember Me</label>
         </div>
-
-    <a id="resetbtn" routerLink="/forgotpass"  class="badge badge-pill badge-secondary">Reset Password</a>
+<div id="forgot">
+  <!-- <img style="width:100%" src="../../assets/icons/forgot.png" alt="forgot png"> -->
+  <i class="fa fa-key" style="color: #af5f5f; margin-right: 5px;"></i>
+  <a id="resetbtn" routerLink="/forgotpass" >Forgot Password</a>
+</div>
+   
     
   </div>
   </div>

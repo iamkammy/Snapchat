@@ -17,13 +17,15 @@
 nav{
     background-color: black;
     color: white;
+    max-height: 59px;
 }
+
 .links{
     padding-right: 16px;
     white-space: nowrap;
     display: block;
 }
-.navwrapper{
+.navwrapper{        
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
@@ -78,7 +80,7 @@ nav{
         display: inline;
     }
     .userlist{
-        z-index: 444;
+        z-index: 99999;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: 200px;

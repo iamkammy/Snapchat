@@ -1,7 +1,7 @@
 <div class="container-fluid navwrapper">
 
     <nav class="navbar navbar-light ">
-        <a style="width: 140px;" class="navbar-brand text-info" routerLink="/"><img style="width: 100%;border-radius:6px;" src="../../assets/icons/kimini.png" alt=""></a>
+        <a style="width: 140px;" class="navbar-brand text-info" routerLink="/"><img style="width: 90%;border-radius:6px;" src="../../assets/icons/kimini.png" alt=""></a>
        <!-- <div>
          <img src="../../assets/icons/kimi-chat-logo.png" alt="">
        </div> -->
@@ -11,7 +11,7 @@
              
             </span>
             <span>
-              <a style="color: white;"  *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
+              <a style="color:white;"  *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
             </span>
             <span>
               <span id="userEmail" *ngIf="(user|async)?.uid">Hello <span id="online"> {{userName}}</span> </span> 
@@ -21,7 +21,8 @@
               <a *ngIf="(user|async)?.uid" (click)="logout()">Logout</a>
             </span>
         
-            <span class="fa fa-user display" (click)="showusers()" ></span>
+            <span style="color:green;" class="fa fa-user display" (click)="showusers()" ></span>
+            
             <ul *ngIf="ulshow" class=" list-group userlist">
              <li class="peoplelist bg-success text-white list-group-item list-group-item-action" *ngFor="let people of users">{{people.displayName}}</li>
             </ul>
