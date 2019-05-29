@@ -1,5 +1,6 @@
 .form-wrapper{
     width:100%;
+    padding: 0 10px;
     margin: 0 auto;
 }
 .chatInput{
@@ -14,12 +15,12 @@
     border-right: 1px solid transparent;
     margin-right:-12px;
     max-height: 40px;
-  
 }
 .chatInput:focus{
     background-color: #E4F1FE;
     color: #222;
     transition: 0.2s ease-in;
+    outline-color: transparent;
 }
 .chatButton{
     border:none;
@@ -53,7 +54,7 @@
     }
     .chatButton{
     border: none;
-    width: 10%;
+    width: 20%;
     padding: 7px;
     font-size: 14px;
     font-family: 'Droid Sans', sans-serif;

@@ -21,7 +21,7 @@
               <a *ngIf="(user|async)?.uid" (click)="logout()">Logout</a>
             </span>
         
-            <span style="color:green;" class="fa fa-user display" (click)="showusers()" ></span>
+            <span style="color:#71c571;" class="fa fa-user display" (click)="showusers()" ></span>
             
             <ul *ngIf="ulshow" class=" list-group userlist">
              <li class="peoplelist bg-success text-white list-group-item list-group-item-action" *ngFor="let people of users">{{people.displayName}}</li>
