@@ -1,10 +1,8 @@
 <div class="container-fluid navwrapper">
 
     <nav class="navbar navbar-light ">
-        <a style="width: 140px;" class="navbar-brand text-info" routerLink="/"><img style="width: 90%;border-radius:6px;" src="../../assets/icons/kimini.png" alt=""></a>
-       <!-- <div>
-         <img src="../../assets/icons/kimi-chat-logo.png" alt="">
-       </div> -->
+        <a id="logoanchor" class="navbar-brand" routerLink="/"><img src="../../assets/icons/kimini.png"></a>
+      
         <div class="links">
             <span>
               <a style="color: white;" *ngIf="!(user|async)?.uid" routerLink="/login" (click)="login()">Login</a>

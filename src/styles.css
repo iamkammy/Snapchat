@@ -7,7 +7,15 @@
 body {
     font-family: "Open Sans", sans-serif;
 }
-
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ff3066; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff3066; 
+  }
 
 .swal2-popup {    
     position: relative;
