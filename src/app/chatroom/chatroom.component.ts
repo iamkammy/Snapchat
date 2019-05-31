@@ -23,7 +23,7 @@ export class ChatroomComponent implements OnInit, AfterViewChecked, AfterViewIni
   }
     
   ngDoCheck(){
-    console.log("from chatroom called   huhahahahah")
+    console.log("from chatroom called  huhahahahah")
    if(this.chat.message_come == true){
     this.feedContainer.nativeElement.scrollTop = this.feedContainer.nativeElement.scrollHeight;
    }

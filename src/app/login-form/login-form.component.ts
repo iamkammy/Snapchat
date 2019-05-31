@@ -15,10 +15,8 @@ export class LoginFormComponent implements OnInit {
   myParams: object = {};
   width: number = 100;
   height: number = 100;
-
   email:  string ;
   password: string;
- 
   errorMsg: string;
   constructor(private authService: AuthService, private router: Router) { 
     if(this.x) {
@@ -28,6 +26,11 @@ export class LoginFormComponent implements OnInit {
     
   }
   ngOnInit(){
+    let user = localStorage.getItem('AuthUSerlogin');
+    console.log('from   3333333333333333333', user);
+    if(user == 'true'){
+      this.router.navigate(['chat']);
+    }
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
